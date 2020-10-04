@@ -9,12 +9,16 @@ function apiRoute (app){
         res.json(notesDB);
     });
 
+    //post request for application
     app.post('/api/notes', function(req, res){
         notesDB.push(req.body);
+        notesDB.forEach(function(note, i){
+            note.id = i + 1
+        })
     });
 
     app.delete('/api/notes/:id', function(req, res){
-        
+
     });
 };
 
