@@ -21,8 +21,8 @@ function apiRoute (app){
         });
 
         //write to the database the request by the user nad respond in return with the json
-        fs.writeFile('./db/db.json', JSON.stringify(db), function(){
-            res.json(db);
+        fs.writeFile('./db/db.json', JSON.stringify(notesDB), function(){
+            res.json(notesDB);
         }); 
 
     });
